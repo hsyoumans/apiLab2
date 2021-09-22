@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Pizza - Build Your Own Review</title>
+        <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Your pizza is being made!</h1>
+    <p>
+        <label>Size:</label> {{size}}
+    </p>
+    <p>
+        <label>Toppings:</label> {{toppingNum}}
+    </p>
+    <p>
+        <label>Gluten-Free Crust:</label> {{glutenFree}}
+    </p>
+    <p>
+        <label>Special Instructions:</label> {{instructions}}
+    </p>
+    <p>
+        <label>Price:</label> ${{ price }}
+    </p>
+    {{#if freeDelivery}}
+    <p class='alert'>
+        <em>Because your order meets the $15.00 minimum, you qualify for FREE DELIVERY!</em>
+    </p>
+    {{/if}}
+    <p>
+        <a href='/pizzaBuilder'>Build another pizza?</a> | <a href='/'>Back to Homepage</a>
+    </p>
+</body>
+</html>

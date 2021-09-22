@@ -1,0 +1,47 @@
+/* center the items and text on the page */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 95vh;
+}
+
+/* format the title of the page */
+h1 {
+    color: rgb(92, 45, 102);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+}
+
+/* center all of the sub-titles */
+h2 {
+    text-align: center;
+}
+
+/* format the rest of the text (minus the list of pizzas) */
+div {
+    text-align: center;
+    color: blue;
+}
+
+/* format the list of pizzas */
+ul {
+    text-align: left;
+    list-style-type: none;
+}
+
+/* format the links before they are clicked */
+a:link {
+    color: purple;
+}
+
+/* format the links after they are clicked */
+a:visited {
+    color: teal;
+}
+
+/* format the links for when they are hovered on */
+a:hover {
+    color: magenta;
+}

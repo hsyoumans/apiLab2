@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Pizza - Build Your Own</title>
+        <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Build Your Own Pizza!</h1>
+    <form method="post">
+        <p>
+            <label for='size'>Size</label>
+            <select name='size' id='size'>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+            </select>
+        </p>
+        <p>
+            <label for='toppingNum'>How many toppings?</label>
+            <input type="number" value="0" id="toppingNum" name="toppingNum" required min="0" max="25" step="1"/>
+        </p>
+        <p>
+            <ul>
+                {{#each toppings}}<li>{{this}}</li>{{/each}}
+            </ul>
+        </p>
+        <p>
+            <input name='glutenFree' id='glutenFree' type='checkbox' />
+            <label for='glutenFree'>Gluten-Free Crust?</label> ($2.00 extra)
+        </p>
+        <p>
+            <label for='instructions'>Special Instructions (optional)</label>
+        </p>
+        <p>
+            <textarea name='instructions' id='instructions' cols="60" rows="5"></textarea>
+        </p>
+        <p>
+            <input type='submit' value='Calculate Price'/>
+            <a href='/'>Never Mind</a>
+        </p>
+    </form>
+</body>
+</html>
